@@ -45,6 +45,9 @@ public class LocatorWebElement extends DriverSetup{
                 System.out.println(element.getText());
             }
 
+            WebElement voiceGoogle = driver.findElement(By.className("goxjub"));
+            voiceGoogle.click();
+            Thread.sleep(3000);
 
         }catch(Exception e) {
             System.out.println(e.getMessage());
