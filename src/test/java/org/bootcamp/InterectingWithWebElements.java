@@ -19,9 +19,21 @@ public class InterectingWithWebElements extends DriverSetup{
         Thread.sleep(3000);
         name.clear();
         Thread.sleep(3000);
+
         //getting placeholder values
         String placeholder_Value = name.getAttribute("placeholder");
         System.out.println(placeholder_Value);
+
+        //Element displayed or selected
+        WebElement textBox = driver.findElement(By.xpath("//input[@id='displayed-text']"));
+        System.out.println(textBox.isDisplayed());
+        driver.findElement(By.xpath("//input[@id='hide-textbox']")).click();
+        System.out.println(textBox.isDisplayed());
+
+        WebElement checkbox = driver.findElement(By.xpath("//input[@id='checkBoxOption1']"));
+        System.out.println(checkbox.isSelected());
+        checkbox.click();
+        System.out.println(checkbox.isSelected());
 
     }
 
